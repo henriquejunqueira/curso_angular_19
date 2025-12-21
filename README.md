@@ -23,3 +23,11 @@ or
 ### Running your new project locally
 
 `ng serve --open`
+
+### Create a new component
+
+`ng generate component <component-name>`
+
+or
+
+`ng g c <component-name>`
