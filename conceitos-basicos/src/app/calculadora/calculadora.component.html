@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="form-box">
+    <form #frm="ngForm">
+      <h2>Calculadora</h2>
+      <label>Primeiro Valor</label>
+      <input
+        type="number"
+        name="primeiroValor"
+        id="primeiroValor"
+        [(ngModel)]="primeiroValor"
+      />
+      <label>Segundo Valor</label>
+      <input
+        type="number"
+        name="segundoValor"
+        id="segundoValor"
+        [(ngModel)]="segundoValor"
+      />
+      <button type="button" (click)="calcularResultado()">Somar</button>
+    </form>
+    <div class="result-display">
+      <p>
+        Resultado: <span id="result">{{ resultado }}</span>
+      </p>
+    </div>
+  </div>
+</div>
