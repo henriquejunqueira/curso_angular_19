@@ -1,6 +1,6 @@
 <div class="container">
   <div class="form-box">
-    <form #frm="ngForm">
+    <form #frm="ngForm" (ngSubmit)="calcularResultado()">
       <h2>Calculadora</h2>
       <label>Primeiro Valor</label>
       <input
@@ -16,12 +16,24 @@
         id="segundoValor"
         [(ngModel)]="segundoValor"
       />
-      <button type="button" (click)="calcularResultado()">Somar</button>
+      <!-- <button type="button" (click)="calcularResultado()">Somar</button> -->
+      <button type="submit">Somar</button>
     </form>
+
+    <div class="result-display" *ngIf="resultado">
+      <p>Seu resultado está abaixo:</p>
+    </div>
+
+    @if(resultado){
     <div class="result-display">
       <p>
         Resultado: <span id="result">{{ resultado }}</span>
       </p>
     </div>
+    } @else{
+    <div class="result-display">
+      <p>Seu resultado aparecerá aqui.</p>
+    </div>
+    }
   </div>
 </div>
