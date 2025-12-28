@@ -31,3 +31,11 @@ or
 or
 
 `ng g c <component-name>`
+
+## Add Angular Material
+
+`ng add @angular/material`
+
+or
+
+`ng add @angular/material@19.0.4`
